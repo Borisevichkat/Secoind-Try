@@ -1,13 +1,14 @@
 .hero
-  background-color: $background-color
+  background-color: $secondary
   padding: 50px 0
   &-block
     display: flex
   &-image
     margin-right: -40px
+    margin-top: -5px
   &-text
     flex-basis: 45%
-    padding-right: 120px
+    margin-right: 70px
     &__title
       font-size: 41px
       margin-bottom: 36px
@@ -29,6 +30,8 @@
       display: flex
       align-items: center
       margin-bottom: 23px
+      &:last-child
+        margin-bottom: 0
     &__image
       width: 40px
       height: 40px
@@ -49,17 +52,18 @@
   .hero
     &-block
       flex-direction: column
+      margin-top: -5px
     &-list
       margin-bottom: 44px
       &__image
         margin-right: 35px
     &-text
       padding-right: 10px
+      margin-top: 5px
 @media (max-width: 768px)
   .hero
     &-image
       min-width: 290px
-      height: 231px
     padding: 20px 0
     &-text
       &__title
@@ -84,10 +88,15 @@
   .hero
     padding-top: 10px
     padding-left: 8px
+    padding-bottom: 50px
     &-image
       margin: auto
+      margin-left: -5px
+      .img1
+        width: 270px
     &-list__item
       margin-bottom: 20px
+      line-height: 0.9
     &-list__text
       line-height: 1.4
     &-text

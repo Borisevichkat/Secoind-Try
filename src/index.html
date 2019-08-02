@@ -21,7 +21,7 @@
             <a href="tel:+7 (495) 42-251-31" class="navbar__phone">+7 (495) 42-251-31</a>
           </div>
           <!-- /.navbar__contacts -->
-          <button class="button navbar__button">
+          <button class="button navbar__button" id="button">
             Перезвоните мне
           </button>
         </div>
@@ -61,11 +61,42 @@
             </ul>
           </div>
           <div class="hero-image">
-            <img src="img/hero/hero-image.png" alt="План квартиры">
+            <img class="img1" src="img/hero/hero-image.png" alt="План квартиры">
           </div>
         </div>
       </div>
     </section>
   </main>
+  <section class="offer section">
+    <div class="container">
+      <div class="offer-block">
+      <h2 class="section-title offer__title"> Мы бесплатно разработаем дизайн-проект Вашего жилья и реализуем его! </h2>
+      <span class="section-subtitle offer__subtitle">Оставьте заявку на разработку бесплатного дизайн-проекта! </span>
+      <form action="#" class="form offer__form">
+        <input type="text" class="input offer__input" placeholder="Ваше имя" >
+        <input type="tell" class="input offer__input" placeholder="Ваш телефон" >
+        <button class="button offer__button">
+          Получить бесплатный дизайн-проект
+        </button>
+      </form>
+      <div class="offer-text">
+        <p class="offer-text__block1">
+          Наш менеджер перезвонит Вам в течение 60 секунд</p>
+        <p class="offer-text__block2">или перезвоните нам сами <br> <a class="offer-tell" href="tell:+7 (495) 42-251-31">+7 (495) 42-251-31</a> </p>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <div class="modal" id="modal">
+    <div class="modal-dialog">
+      <button class="modal-dialog__close" id="close">&times;</button>
+      <h4 class="modal-dialog__title">
+
+      </h4>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
