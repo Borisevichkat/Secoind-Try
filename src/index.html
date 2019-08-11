@@ -7,6 +7,8 @@
   <title>Document</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/animate.css">
 </head>
 <body>
   <nav class="navbar">
@@ -21,7 +23,7 @@
             <a href="tel:+7 (495) 42-251-31" class="navbar__phone">+7 (495) 42-251-31</a>
           </div>
           <!-- /.navbar__contacts -->
-          <button class="button navbar__button" id="button">
+          <button class="button navbar__button wow zoomIn" id="button">
             Перезвоните мне
           </button>
         </div>
@@ -44,19 +46,19 @@
                 <div class="hero-list__image">
                   <img src="img/hero/clock.png" alt="clock">
                 </div>
-                <span class="hero-list__text">Точно соблюдаем сроки</span>
+                <span class="hero-list__text wow lightSpeedIn" data-wow-delay="0.2s">Точно соблюдаем сроки</span>
               </li>
               <li class="hero-list__item">
                 <div class="hero-list__image">
                   <img src="img/hero/calculator.png" alt="calculator">
                 </div>
-                <span class="hero-list__text">Рассчитаем смету на работы и&nbsp;материалы в день обращения</span>
+                <span class="hero-list__text wow lightSpeedIn" data-wow-delay="0.4s">Рассчитаем смету на работы и&nbsp;материалы в день обращения</span>
               </li>
               <li class="hero-list__item">
                 <div class="hero-list__image">
                   <img src="img/hero/paint-board.png" alt="paint-board">
                 </div>
-                <span class="hero-list__text">Предложим более 100 вариантов исполнения дизайна Вашего жилья</span>
+                <span class="hero-list__text wow lightSpeedIn" data-wow-delay="0.6s">Предложим более 100 вариантов исполнения дизайна Вашего жилья</span>
               </li>
             </ul>
           </div>
@@ -72,15 +74,16 @@
       <div class="offer-block">
       <h2 class="section-title offer__title"> Мы бесплатно разработаем дизайн-проект Вашего жилья и реализуем его! </h2>
       <span class="section-subtitle offer__subtitle">Оставьте заявку на разработку бесплатного дизайн-проекта! </span>
-      <form action="#" class="form offer__form">
-        <input type="text" class="input offer__input" placeholder="Ваше имя" >
-        <input type="tell" class="input offer__input" placeholder="Ваш телефон" >
-        <button class="button offer__button">
+      <form action="#" id="offer-form" class="form offer__form">
+        <input type="text" name="username" class="input offer__input" placeholder="Ваше имя" >
+        <input type="tell" name="userphone" class="input offer__input" placeholder="Ваш телефон" >
+        <button class="button offer__button wow zoomIn">
           Получить бесплатный дизайн-проект
         </button>
       </form>
+      <div class="success"></div>
       <div class="offer-text">
-        <p class="offer-text__block1">
+        <p class="offer-text__block1 wow flash">
           Наш менеджер перезвонит Вам в течение 60 секунд</p>
         <p class="offer-text__block2">или перезвоните нам сами <br> <a class="offer-tell" href="tell:+7 (495) 42-251-31">+7 (495) 42-251-31</a> </p>
       </div>
@@ -88,15 +91,135 @@
     </div>
   </section>
 
+  <section class="section portfolio">
+    <div class="container container-portfolio">
+      <h2 class="section-title portfolio__title wow pulse">Работая с 2007 года,<br> мы сделали более 500 ремонтов в квартирах и домах</h2>
+
+      <div class="slider">
+        <div class="slider__item"><img class="slider__image" src="img/portfolio/slider-1.jpg" alt=""></div>
+        <div class="slider__item"><img class="slider__image" src="img/portfolio/slider-2.jpg" alt=""></div>
+        <div class="slider__item"><img class="slider__image" src="img/portfolio/slider-3.jpg" alt=""></div>
+        <div class="slider__item"><img class="slider__image" src="img/portfolio/slider-1.jpg" alt=""></div>
+        <div class="slider__item"><img class="slider__image" src="img/portfolio/slider-2.jpg" alt=""></div>
+        <div class="slider__item"><img class="slider__image" src="img/portfolio/slider-3.jpg" alt=""></div>
+      </div>
+    </div>
+    <div class="arrows portfolio__arrows">
+      <div class="arrows__left">
+        <img src="img/portfolio/left-arrow.png" alt="">
+      </div>
+      <div class="arrows__right">
+        <img src="img/portfolio/right-arrow.png" alt="">
+      </div>
+    </div>
+  </section>
+  
+  <section class="section price">
+    <div class="container">
+      <h2 class="section-title price__title">У нас очень гибкая система скидок на комплексные работы!</h2>
+      <span class="section-subtitle price__subtitle">Прайс на наши услуги</span>
+      <div class="cards">
+        <div class="card price-card wow fadeInUp" data-wow-delay="0.1s">
+          <div class="card__image"><img src="img/price/price1.png" alt=""></div>
+          <div class="card__text">
+            <h4 class="card__title">Ремонт ванных комнат и с/у</h4>
+            <a href="" class="card__link">Узнать цены</a>
+          </div>
+        </div>
+        <div class="card price-card wow fadeInUp" data-wow-delay="0.2s">
+          <div class="card__image"><img src="img/price/price2.png" alt=""></div>
+          <div class="card__text">
+            <h4 class="card__title">Ремонт комнат и квартир</h4>
+            <a href="" class="card__link">Узнать цены</a>
+          </div>
+        </div>
+        <div class="card price-card wow fadeInUp" data-wow-delay="0.3s">
+          <div class="card__image"><img src="img/price/price3.png" alt=""></div>
+          <div class="card__text">
+            <h4 class="card__title">Отделка офисных помещений</h4>
+            <a href="" class="card__link">Узнать цены</a>
+          </div>
+        </div>
+        <div class="card price-card wow fadeInUp" data-wow-delay="0.4s">
+          <div class="card__image"><img src="img/price/price43.png" alt=""></div>
+          <div class="card__text">
+            <h4 class="card__title">Ремонт в новостройках</h4>
+            <a href="" class="card__link">Узнать цены</a>
+          </div>
+        </div>
+        <div class="card price-card wow fadeInUp" data-wow-delay="0.5s">
+          <div class="card__image"><img src="img/price/price5.png" alt=""></div>
+          <div class="card__text">
+            <h4 class="card__title">Ремонт кухонь</h4>
+            <a href="" class="card__link">Узнать цены</a>
+          </div>
+        </div>
+        <div class="card price-card wow fadeInUp" data-wow-delay="0.6s">
+          <div class="card__image"><img src="img/price/price6.png" alt=""></div>
+          <div class="card__text">
+            <h4 class="card__title">Ремонт дач и коттеджей</h4>
+            <a href="" class="card__link">Узнать цены</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <div class="modal" id="modal">
     <div class="modal-dialog">
       <button class="modal-dialog__close" id="close">&times;</button>
-      <h4 class="modal-dialog__title">
-
-      </h4>
+      <div class="modal-block">
+          <h2 class="modal-block__title"> Узнайте точную стоимость ремонта по телефону!</h2>
+          <span class="modal-block__subtitle">
+            Заполните поля ниже - мы свяжемся с Вами
+          </span>
+          <form action="" class="modal-block__form">
+            <input type="text" class="modal-block__input" placeholder="Ваше имя">
+            <input type="text" class="modal-block__input" placeholder="Ваш телефон">
+            <button class=" button modal-block__btn">Узнать стоимость</button>
+          </form>
+          <p class="modal-block__recall">Или Вы можете перезвонить нам сами по телефону:</p>
+          <a href="tell:+7 (8182) 42-51-31" class="modal-block__tell">+7 (8182) 42-51-31 </a>
+      </div>
+      
     </div>
   </div>
+  <div class="PopUp_hidden">
+    Спасибо за заявку, скоро мы вам перезвоним.
+  </div>
 
-  <script src="js/main.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="js/modal.js"></script>
+  <script src="js/scripts.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script>
+    new WOW().init();
+    $(document).ready(function() {
+      $('.slider').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        prevArrow: $('.arrows__left'),
+        nextArrow: $('.arrows__right'),
+        responsive: [
+          {
+            breakpoint: 1200,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+      });
+    });
+  </script>
 </body>
 </html>

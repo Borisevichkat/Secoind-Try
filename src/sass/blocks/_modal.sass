@@ -11,7 +11,7 @@
   &-dialog
     position: relative
     margin: auto
-    max-width: 450px
+    max-width: 570px
     width: 90%
     min-width: 200px
     background-color: #fff
@@ -20,3 +20,68 @@
       position: absolute
       top: 0
       right: 0
+  &-block
+    display: flex
+    flex-direction: column
+    text-align: center
+    &__input
+      width: 370px
+      height: 65px
+      border-radius: 10px
+      border: 1px solid #dddddd
+    &__title
+      font-size: 22px
+      +bold
+      width: 291px
+      margin: auto
+      margin-bottom: 55px
+    &__subtitle
+      font-size: 16px
+      margin-bottom: 55px
+    &__input
+      margin-bottom: 15px
+      padding-left: 26px
+      outline: none
+      &:focus
+        border: 1px solid $main-color
+        border-radius: 5px
+    &__btn
+      width: 368px
+      height: 70px
+      border-radius: 10px
+      +bold
+      margin-bottom: 33px
+    &__recall
+      font-size: 15px 
+      width: 271px
+      margin: auto
+      margin-bottom: 13px
+    &__tell
+      text-decoration: none
+      +bold
+      color: #333333
+
+@media (max-width: 576px)
+  .modal
+    &-block
+      &__title
+        margin-bottom: 10px
+        margin-top: -10px
+        margin-left: -40px
+        font-size: 18px
+      &__subtitle
+        margin-bottom: 10px
+      &__form
+        margin-left: -20px
+      &__input
+        width: 250px
+        height: 50px
+      &__btn
+        width: 250px;
+        height: 50px;
+      &__recall
+        margin-left: -30px
+.PopUp_hidden
+  display: none
+.PopUp_active
+  display: fixed
